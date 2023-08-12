@@ -22,7 +22,7 @@ public class Comments {
 	private String comment;
 	@ManyToOne
 	@JoinColumn(name = "lesson_Id",referencedColumnName = "lessonId")
-	Lesson lesson;
+	private Lesson lesson;
 	
 	@Temporal(TemporalType.TIMESTAMP)
     private Date creationTimestamp;
