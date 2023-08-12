@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Course</title>
+<link rel="stylesheet" href="/css/courses.css">
+<link rel="stylesheet" href="/css/purchaseCourse.css">
+
+<!--fab-icon -->
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+
+<body>
+    <div class="nav">
+       <div class="logo_div">
+         <a href="/"><img alt="" src="/img/logo.png"></a>
+       </div>
+        <div class="crossIcon_div">
+         <a onclick="goBack()" style='font-size:30px; cursor: pointer'>&#10006;</a>
+       </div>    
+    </div>
+    
+	<div class="container">
+	    <h1 class="tittle_h1">Choose A course To Kick Start Your Career</h1>
+	    <span class="alert" th:text="${message}"></span>
+		<h3>Courses Details</h3>
+		<table >
+		<tr>
+			<th>Course Id</th>
+			<th>Course Name</th>
+			<th>Course Price</th>
+			<th>Lessons</th>
+			<th>Actions</th>
+		</tr>
+		<tr th:each="courseList: ${courseList}">
+			<td th:text="${courseList.courseId}"></td>
+			<td th:text="${courseList.courseName}"></td>
+			<td th:text="${courseList.coursePrice}"></td>
+			<td>
+			    <div>
+			       <span th:each="lessons:${courseList.lessons}" th:text=" ${lessons.lessonName} +', '"></span>
+			    </div>               
+             </td>
+            <td>  
+               <form th:action="@{/buy-course/{courseId}(courseId=${courseList.courseId})}" method="post">
+                <input type="submit" class="buy_btn" value="Buy Now">
+            </form>
+               
+            </td>	
+		</tr>	
+	</table>	
+	</div>
+	<script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>	
+</body>
+</html>

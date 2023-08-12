@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.tittle_h1{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 60px;
+}
+.buy_btn{
+	padding: 12px;
+	color: white;
+	background-color: red;
+	border-radius: 4px;
+}
+.buy_btn:hover{
+	background-color: green;
+	
+}
+
+.alert{
+	color: red;
+    display: block;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .tittle_h1{
+    margin-top: 3px;
+    margin-bottom: 40px;
+}
+}
