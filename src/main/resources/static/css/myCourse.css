@@ -7,40 +7,37 @@
 body{
 	background-color: rgb(242, 242, 242);
 }
-nav{
-    background-color: #4caf50;
-    color: #fff;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    font-size:1.1rem;
-    font-family: "Baloo Bhai 2", cursive;
-    
+nav {
+	background-color: #4caf50;
+	color: #fff;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	font-size: 1.1rem;
+	font-weight:400;
+	font-family: "Baloo Bhai 2", cursive;
 }
-nav .logo{
-    margin-left: 35px;
-}
-nav a img{
-    width: 70px;
-}
-ul{
-   padding-left: 7%;
-   list-style: none;
-   display: flex;
-   align-items: center;
-   flex-direction: row;
-   gap: 20px;
-    
 
+ul {
+	padding-left: 7%;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 20px;
 }
-li{
-    
-    color: white;
-    
+
+li {
+	color: white;
 }
-li a{
-    text-decoration: none;
-    color: white;
+
+li a {
+	text-decoration: none;
+	color: white;
+}
+
+li img {
+	width: 70px;
 }
 
 .course{
@@ -79,6 +76,8 @@ li a{
 }
 .card img{
     height: 130px;
+    padding: 8px;
+    border-radius: 15px;
 }
 .back_btn{
     background: #4caf50;
